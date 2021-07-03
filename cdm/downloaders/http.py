@@ -14,10 +14,10 @@ class HTTP:
     def download (self):
         response = get(self.url, allow_redirects=True)
 
-        filename = getFilename(response.headers.get('content-disposition')) if not None else "file"
+        filename = self.getFilename(response.headers.get('content-disposition'))
 
         with open (self.path+filename, "wb") as file:
-            file.write(r.content)
+            file.write(response.content)
 
 
     @staticmethod
@@ -29,5 +29,5 @@ class HTTP:
             return None
         fname = re.findall('filename=(.+)', content)
         if len(fname) == 0:
-            return None
+            return "file"
         return fname[0]
