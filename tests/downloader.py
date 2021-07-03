@@ -3,9 +3,9 @@ from os.path import exists
 
 try:
     from cdm.downloaders.http import HTTP
-expect ImportError:
-    print("sorry I have a Problem! 😭")
-    exit(0)
+except ImportError as error:
+        print(error.__class__.__name__ + ":" + error.message)
+        exit(0)
 
 def httpTest():
     
