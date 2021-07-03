@@ -8,4 +8,4 @@ def httpTest():
     http = HTTP(url="https://cdn.realpython.com/static/real-python-logo.893c30edea53.svg")
     http.download()
     
-    assert exists(http.getFilename)
+    assert exists(http.getFilename) is True
