@@ -1,7 +1,11 @@
 
 from os.path import exists
 
-from cdm.downloaders.http import HTTP
+try:
+    from cdm.downloaders.http import HTTP
+expect ImportError:
+    print("sorry I have a Problem! 😭")
+    exit(0)
 
 def httpTest():
     
