@@ -12,11 +12,11 @@ class HTTP:
     
     
     def download (self):
-        response = get(url, allow_redirects=True)
+        response = get(self.url, allow_redirects=True)
 
-        filename = getFilename_fromCd(response.headers.get('content-disposition'))
+        filename = getFilename(response.headers.get('content-disposition'))
 
-        with open (path+filename, "wb") as file:
+        with open (self.path+filename, "wb") as file:
             file.write(r.content)
 
 
