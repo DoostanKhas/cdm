@@ -9,6 +9,7 @@
 cdm [OPTIONS] URL
 
 ```
+---
 
 ## OPTIONS
 
