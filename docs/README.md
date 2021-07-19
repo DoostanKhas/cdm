@@ -2,18 +2,17 @@
 
 ## cdm is a commend line Download Manger
 
-> You can download your file by giving arguments to the program
+You can download your file by giving arguments to the program
 ‍
-```bash
+```
 
 cdm [OPTIONS] URL
 
 ```
----
 
 ## OPTIONS
 
-```bash
+```
 Options:
   --number_of_threads INTEGER  No of Threads
   --name PATH                  Name of the file with extension
