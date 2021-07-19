@@ -4,7 +4,7 @@
 
 > You can download your file by giving arguments to the program
 ‍
-```shell
+```bash
 
 cdm [OPTIONS] URL
 
@@ -13,7 +13,7 @@ cdm [OPTIONS] URL
 
 ## OPTIONS
 
-```shell
+```bash
 Options:
   --number_of_threads INTEGER  No of Threads
   --name PATH                  Name of the file with extension
