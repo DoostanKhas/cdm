@@ -12,11 +12,9 @@ cdm [OPTIONS] URL
 
 ## OPTIONS
 
-```
-
+```shell
 Options:
   --number_of_threads INTEGER  No of Threads
   --name PATH                  Name of the file with extension
   --help                       Show this message and exit.
-
 ```
