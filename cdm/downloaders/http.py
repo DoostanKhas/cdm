@@ -1,33 +1,23 @@
+# Importing the required packages
+import threading
 
-import re
-
-from requests import get
-
-
-class HTTP:
-    
-    def __init__(self, url, path=""):
-        self.url = url
-        self.path = path
-    
-    
-    def download (self):
-        response = get(self.url, allow_redirects=True)
-
-        filename = self.getFilename(response.headers.get('content-disposition'))
-
-        with open (self.path+filename, "wb") as file:
-            file.write(response.content)
+import requests
 
 
-    @staticmethod
-    def getFilename(content):
-        """
-        Get filename from content-disposition
-        """
-        if not content:
-            return None
-        fname = re.findall('filename=(.+)', content)
-        if len(fname) == 0:
-            return "file"
-        return fname[0]
+# The below code is used for each chunk of file handled by each thread for downloading
+# the content from specified location to storage
+def HTTP_Handler(start, end, url, filename):
+
+    # specify the starting and ending of the file
+    headers = {"Range": "bytes=%d-%d" % (start, end)}
+
+    # request the specified part and get into variable
+    r = requests.get(url, headers=headers, stream=True)
+
+    # open the file and write the content of the html page
+    # into file.
+    with open(filename, "r+b") as f:
+
+        f.seek(start)
+        var = f.tell()
+        f.write(r.content)

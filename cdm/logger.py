@@ -1,9 +1,11 @@
-"""
-The Logger.This Module is a say we, now what do it work.
-"""
-
 import logging
 
-def logger ():
-    """ Logger Function"""
-    pass
+logging.basicConfig(
+    level=logging.INFO,
+    format=" \u001b[32m[\u001b[0m %(asctime)s \u001b[32m][\u001b[0m%(message)s\u001b[32m]\u001b[0m",
+    datefmt="%I:%M:%S",
+)
+
+
+def logger(msg):
+    return logging.info(msg)
