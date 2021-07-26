@@ -1,13 +1,20 @@
-# Cdm Document 📄📃
+# dcdm Document 📄📃
 
-## cdm is a commend line Download Manger
+## dcdm is a commend line Download Manger
 
 You can download your file by giving arguments to the program
 ‍
+
 ```
 
 cdm [OPTIONS] URL
 
+```
+
+## install
+
+```
+pip install dcdm
 ```
 
 ## OPTIONS

@@ -1,5 +1,5 @@
 """
-cdm is a commend line Download Manger.
+dcdm is a commend line Download Manger.
 this file is main file"""
 
 from __future__ import print_function, unicode_literals
@@ -12,8 +12,8 @@ from time import gmtime, strftime
 import click
 import requests
 
-from downloaders.http import HTTP_Handler
-from logger import log_download
+from cdm.downloaders import HTTP_Handler
+from cdm.logger import log_download
 
 
 @click.command(help="This command is used to download from a link.")
@@ -61,7 +61,3 @@ def download_file(ctx, url, name, number_of_threads):
             continue
         t.join()
     print("(\u001b[32;1m OK \u001b[0m):download completed.")
-
-
-if __name__ == "__main__":
-    download_file(obj={})

@@ -1,3 +1,6 @@
+"""dcdm is a commend line Download Manger.
+this file is logger file and it work is
+Logging To user"""
 import logging
 
 

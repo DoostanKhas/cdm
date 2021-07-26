@@ -1,4 +1,4 @@
-# Cdm
+# dcdm
 
 > [C]ommendLine [D]ownload [M]anager
 
@@ -6,10 +6,17 @@
 
 You can download your file by giving arguments to the program
 ‍
+
 ```
 
 cdm [OPTIONS] URL
 
+```
+
+## Install
+
+```
+pip install dcdm
 ```
 
 ## OPTIONS
