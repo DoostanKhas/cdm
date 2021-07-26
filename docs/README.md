@@ -1,6 +1,6 @@
-# dcdm Document 📄📃
+# cdm Document 📄📃
 
-## dcdm is a commend line Download Manger
+## cdm is a commend line Download Manger
 
 You can download your file by giving arguments to the program
 ‍
